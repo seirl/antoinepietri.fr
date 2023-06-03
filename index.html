@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+ __              __    KOIN
+ \ \       ___  / /      KOIN
+  \ \     / _ \/ /   KOIN   KOIN
+   \ \   | (0) \ \       KOIN
+    \_\___\___/ \_\    KOIN
+     |_____|
+-->
+
+  <head>
+    <title>Antoine Pietri</title>
+    <meta charset="utf-8">
+
+    <!-- <Jill-Jênn> Tu peux trouver Vieux-Port=1.0 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="favicon.png">
+
+    <!-- Showing off my awsum CSS skillz -->
+    <style>
+body {
+    font-family: monospace;
+    margin: auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+h2:before {
+  content: "> ";
+}
+
+details {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.figure-small {
+    float: right;
+}
+
+.figure-big {
+    margin: auto;
+    text-align: center;
+}
+    </style>
+  </head>
+
+
+  <body>
+
+    <h1>seirl's webzone &nbsp; \_o&lt; ~ ♫♩</h1>
+
+    <h2>whoami</h2>
+
+    <p>I'm <strong>Antoine Pietri</strong>, a Ph.D student working in
+    Paris. I have a software engineering degree from the computer science
+    school <a href="http://epita.fr/">EPITA</a>. I have various interests like
+    programming, algorithms, languages and language theory, networks, tooling,
+    and good abstractions.</p>
+
+    <p>You can find my <strong>
+        <a href="http://koin.fr/upload/cv.pdf">resume here</a>
+    </strong>.</p>
+
+    <h2>research</h2>
+
+    <h3>Software Heritage</h3>
+    <p>I'm a Ph.D student working on the
+    <a href="https://www.softwareheritage.org/">Software Heritage</a>
+    project at <a href="https://www.inria.fr/">Inria</a> on large-scale
+    analysis of the source code available in the Software heritage archive,
+    under the supervision of
+    <a href="https://en.wikipedia.org/wiki/Roberto_Di_Cosmo">Roberto di Cosmo</a>
+    and <a href="https://en.wikipedia.org/wiki/Stefano_Zacchiroli">Stefano Zacchiroli</a>.</p>
+
+    <details>
+        <summary>Click here to see the full subject of my thesis.</summary>
+        <h3>Enabling Big Code analysis on a very large source code corpus</h3>
+
+        <h4>Context</h4>
+
+        <p>Software Heritage is an ambitious digital preservation initiative
+        that is amassing unprecedented amounts of software source code from a
+        variety of origins, and keeps track of all their evolution history, as
+        captured by version control systems. This is leading to the creation of
+        one of the largest source code corpus and is building the corresponding
+        development graph where the nodes are the contents of the source files,
+        directories and commit points, and the edges carry the name of the
+        files, and the links between commits and directories.</p>
+
+        <p>The availability of this universal software source code knowledge
+        base provides unique opportunities for what is now known as “Big Code”
+        research: querying, analysing and extracting knowledge both from the
+        contents of the data and from the structure of the commit graph. We
+        expect that having a way to leverage the data contained in very large
+        source code archives that include development history, like the
+        Software Heritage archive, will pave the way to learn more about the
+        evolution of software at a very large scale than it has ever been
+        possible before.</p>
+
+        <p>The exploitation of such an unprecedented very large source code
+        collection poses significant challenges in terms of data
+        representation, query languages, system architecture and specialised
+        algorithms.</p>
+
+        <a href="merkle.svg">
+            <figure class="figure-big">
+                <img src="merkle.svg"
+                     width="400"
+                     alt="The Software Heritage Merkle DAG" />
+                <figcaption>
+                    The Software Heritage Merkle Directed Acyclic Graph
+                </figcaption>
+            </figure>
+        </a>
+
+
+        <h4>Objectives of the thesis</h4>
+
+        <p>The main focus of the thesis will be to find efficient ways to
+        perform large scale computations not only on the content of the
+        archive, but also on useful data that could be derived from it, like
+        code diffs, releases, branch/merge history, and reuse patterns.</p>
+
+        <p>The current data representation structure of Software Heritage is a
+        Merkle DAG, which allows efficient deduplication, verification, and
+        indexing of the content of the archive. While this format is
+        cost-efficient for preservation purposes, it has not been designed with
+        large scale analysis in mind. The current design uses data indirections
+        extensively, which adds considerable latency to read-intensive
+        operations. An important part of our goal will be to explore more
+        efficient ways of storing and indexing all the software artifacts
+        currently contained in the DAG, to allow for intensive computations to
+        take place on the archive.</p>
+
+        <p>As part of this quest for the most efficient data representation for
+        such an archive, we will look for heuristics to find and isolate
+        repetitive code snippets, as it would not only allow to deduplicate and
+        analyze the content at a more fine-grained level, but also give
+        valuable insights to implement efficient storage, retrieval, and
+        analysis of those snippets.</p>
+
+        <p>Another important aspect that will be looked into is the interface
+        for performing computations on the archive. As the Merkle DAG structure
+        is pretty unique, we will investigate ways of performing efficient and
+        expressive queries by working on a query language that operates on this
+        structure. This language could either be an adaptation or an extension
+        of relational algebra implementations like SQL, or a completely new
+        domain-specific language.</p>
+
+        <p>As we expect this project to become an important gateway for
+        scientists working on Big Code analysis, the thesis will have to work
+        with efficient distributed architectures as an integral part of the
+        project’s design. For instance, it should be easy and cost-efficient to
+        make the analysis infrastructure scale-out to accommodate for load
+        increases. At the same time, the deployment should be easy, for example
+        allowing instantiation on state-of-the-art public cloud offering.</p>
+
+        <p>Finally, the thesis will necessarily include practical applications and
+        experimental validation of the analysis approach, in order to show
+        meaningful results and usage examples, and as a way to test the general
+        usability of the system.</p>
+    </details>
+
+    <h4>Community</h4>
+
+    <ul>
+      <li><strong>OSS 2021:</strong> PC member</li>
+      <li><strong>MSR 2021:</strong> PC member of the technical track</li>
+      <li><strong>MSR 2020:</strong> PC chair of the mining challenge track</li>
+    </ul>
+
+    <h4>Publications</h4>
+
+    <ul>
+        <li>
+            Antoine Pietri, Thibault Allançon, Stefano Zacchiroli.
+            <strong>The Software Heritage Filesystem (SwhFS): Integrating Source
+                Code Archival with Development</strong>
+            <em>Proceedings of ICSE 2021: The 43rd International Conference on
+                Software Engineering, May 2021, Madrid, Spain. IEEE 2021.</em>
+            <a href="https://upsilon.cc/~zack/research/publications/swh-fuse-icse2021.pdf">preprint</a>
+        </li>
+        <li>
+            Antoine Pietri, Guillaume Rousseau, Stefano Zacchiroli.
+            <strong>Forking Without Clicking: on How to Identify Software
+                Repository Forks</strong>
+            <em>Mining Software Repositories 2020</em>
+            <a href="https://upsilon.cc/~zack/research/publications/msr-2020-forks.pdf">preprint</a>
+        </li>
+        <li>Antoine Pietri, Guillaume Rousseau, Stefano Zacchiroli.
+            <strong>Determining The Intrinsic Structure Of Public Software Development
+                History</strong>
+            <em>Mining Software Repositories 2020</em>
+            <a href="https://upsilon.cc/~zack/research/publications/msr-2020-topology.pdf">preprint</a>
+        </li>
+        <li>Paolo Boldi, Antoine Pietri, Sebastiano Vigna, Stefano Zacchiroli.
+            <strong>Ultra-Large-Scale Repository Analysis via Graph
+                Compression.</strong>
+            <em>SANER 2020</em>
+            <a href="https://upsilon.cc/~zack/research/publications/saner-2020-swh-graph.pdf">preprint</a>
+        </li>
+        <li>Antoine Pietri, Diomidis Spinellis, Stefano Zacchiroli. The
+            <strong>Software Heritage Graph Dataset: Large-scale Analysis of Public
+                Software Development History.</strong>
+            <em>Mining Software Repositories 2020</em>
+            <a href="https://upsilon.cc/~zack/research/publications/msr-2020-challenge.pdf">preprint</a>
+        </li>
+        <li>Antoine Pietri, Diomidis Spinellis, Stefano Zacchiroli.
+            <strong>The Software Heritage Graph Dataset: Public software development
+                under one roof.</strong>
+            <em>Mining Software Repositories, MSR 2019.</em>
+            <a href="https://upsilon.cc/~zack/research/publications/msr-2019-swh.pdf">preprint</a>
+        </li>
+        <li>Antoine Pietri, Stefano Zacchiroli.
+            <strong>Towards Universal Software
+                Evolution Analysis.</strong>
+            <em>BENEVOL 2019</em>
+            <a href="https://upsilon.cc/~zack/research/publications/benevol-2018-swh.pdf">preprint</a>
+        </li>
+    </ul>
+
+    <h3>Vcsn</h3>
+    <p>I was previously working as a Research Student on the C++ finite state
+    machine framework <a href="https://www.lrde.epita.fr/wiki/Vcsn">Vcsn</a> in
+    the <a href="https://www.lrde.epita.fr">LRDE</a> laboratory, under the
+    supervision of
+    <a href="https://www.lrde.epita.fr/wiki/User:Akim">Akim Demaille</a> and
+    with help from
+    <a href="http://perso.telecom-paristech.fr/~jsaka/">Jacques Sakarovitch</a>,
+    where I worked on:</p>
+
+    <ul>
+      <li>2014: finding short <a href="https://en.wikipedia.org/wiki/Synchronizing_word">synchronizing words</a>:
+        <a href="https://koin.fr/upload/pietri.14.seminar.slides.pdf">slides</a> —
+        <a href="https://koin.fr/upload/pietri.14.seminar.techreport.pdf">report</a></li>
+      <li>2015: efficient elimination of spontaneous transitions in weighted automata</li>
+      <li>2016: random generation of automata</li>
+    </ul>
+
+    <h2>prologin</h2>
+    <p>I have been an organizer of the French national programming contest
+    <strong><a href="https://prologin.org">Prologin</a></strong> since 2011. I
+    was the president of the organization in 2014, and I now mostly work on the
+    technical aspects of the contest.</p>
+
+    <p>I worked on a lot of very interesting projects there, among which:</p>
+    <ul>
+      <li><a href="https://github.com/prologin/camisole">camisole</a>: a secure
+        sandbox in Python that uses kernel namespacing and cgroups</li>
+      <li><a href="https://github.com/prologin/stechec2">stechec2</a>: a
+        client-server match-maker and networking framework in C++</li>
+      <li><a href="https://github.com/prologin/sadm">sadm</a>: the
+        infrastructure of the finals, where I wrote a
+        <a href="https://github.com/prologin/sadm/tree/master/python-lib/prologin/masternode">custom task queue</a> with Python and asyncio,
+        an <a href="https://github.com/prologin/sadm/tree/master/python-lib/prologin/rpc">RPC</a>, and other stuff</li>
+      <li><a href="https://prologin.org">prologin.org</a>: the website in
+        Django.</li>
+    </ul>
+
+    <p>I wrote algorithmic exercises and written subjects for the contest.
+    You can find the most interesting ones here (in French):</p>
+
+    <ul>
+      <li><a href="https://prologin.org/train/2014/qualification/repli">Repli</a> (shortest synchronizing word)</li>
+      <li><a href="https://prologin.org/train/2012/qualification/relaxation">Relaxation</a> (change-making problem)</li>
+      <li><a href="https://prologin.org/train/2014/semifinal/couplage">Couplage</a> (longest common subsequence problem)</li>
+      <li><a href="https://prologin.org/train/2014/semifinal/correction">Correction de copies</a> (partition problem)</li>
+      <li><a href="https://prologin.org/train/2012/semifinal/marelle">Marelle</a> (dynamic programming)</li>
+      <li><a href="https://prologin.org/static/archives/2017/demi-finales/sujet/manywhelps.pdf">Many whelps! Now handle it!</a> (bin-packing)</li>
+      <li><a href="https://prologin.org/static/archives/2014/demi-finales/sujet/glabulzateurs.pdf">Glabulzateurs</a> (automata theory)</li>
+      <li><a href="https://prologin.org/static/archives/2012/demi-finales/sujet/time-war.pdf">The Time War</a> (path finding and dynamic programming)</li>
+    </ul>
+
+    <p>I also created the tournament games of the finals in
+    <a href="https://prologin.org/static/archives/2013/finale/sujet/island-quest.pdf">2013</a>,
+    <a href="https://prologin.org/static/archives/2014/finale/sujet/tours-de-magie.pdf">2014</a>,
+    <a href="https://prologin.org/static/archives/2015/finale/sujet/noosphere.pdf">2015</a> and
+    <a href="https://prologin.org/static/archives/2016/finale/sujet/provogon.pdf">2016</a>.
+
+    <h2>tech skillz</h2>
+
+    <p>This is a non-exhaustive list of technologies and stuff I like to
+    use.</p>
+
+    <ul>
+      <li><strong>languages</strong>: Python, C++, C, OCaml, C#, SQL, bash,
+          Java, PHP/Hack<sup>(please no)</sup></li>
+      <li><strong>data</strong>: ElasticSearch, PostgreSQL
+      <li><strong>libs</strong>: asyncio, tornado, aiohttp, Qt, ZeroMQ, boost,
+          gtest, celery
+      <li><strong>web</strong>: nginx, Apache, django, Flask, requests,
+          Let's Encrypt
+      <li><strong>tools</strong>: git, vim, cmake, i3, tmux
+      <li><strong>network</strong>: iptables, netfilter, iproute2, tcpdump
+      <li><strong>protocols</strong>: HTTP, TLS, DNS, IRC, XMPP
+      <li><strong>storage</strong>: NFS, NBD, ext4, btrfs, bcache, overlay,
+          RAID, LVM
+      <li><strong>os</strong>: Linux (Archlinux, Debian, Ubuntu), FreeBSD,
+          Windows
+      <li><strong>virtualization</strong>: VirtualBox, libvirt, Xen, QEMU,
+          vagrant, packer
+      <li><strong>containers</strong>: Docker, OpenVZ, LXC, systemd-nspawn
+      <li><strong>other</strong>: iPXE, systemd
+    </ul>
+
+    <h2>random projects</h2>
+
+    <p>Here are some of the ones worth mentioning (some of them are school
+    projects that grew out of hand):</p>
+
+    <ul>
+      <li>42sh: a functional posix compliant shell made with Rémi
+        Audebert, Paul Hervot and Adrien Schildknecht</li>
+      <li><a href="https://github.com/seirl/ouiche">ouiche</a>: a fast
+        spell checker in C++ with a Radix Tree and a dynamic
+        Damerau-Levenshtein table</li>
+      <li><a href="https://github.com/seirl/epiquote">epiquote</a>: a
+        bash.org-like website in django</li>
+      <li><a href="https://github.com/seirl/m68hc11">m68hc11</a>: a
+        m68hc11 assembler in C</li>
+      <li><a href="https://bitbucket.org/Zeletochoy/hopf-is-alie">hopf-is-alie</a>:
+        a hopf fibration computed with quaternions and fully rendered in a
+        GLSL shader, made with Antoine Lecubin —
+        <a href="http://koin.fr/upload/hopf-fibration.2017.pdf">report(fr)</a>
+        — <a href="http://koin.fr/upload/hopf-fibration.2017.mp4">video</a>
+      <li><a href="https://github.com/seirl/zerauth">zerauth</a>: a reverse
+          engineered implementation of the zeroshell auth protocol</li>
+      </li>
+    </ul>
+
+    <!--
+    In real FOSS projects, I never found the time to actually do more work
+    than hanging around on their IRC channels and fixing some bugs. You might
+    stumble upon some of my minor contributions in some projects, like
+    <a href="https://github.com/python/cpython">CPython</a>,
+    <a href="https://www.bitlbee.org">BitlBee</a> or
+    <a href="https://weechat.org/">WeeChat</a>,
+    but that's about it.
+    -->
+
+    <h2>contact & links</h2>
+    <ul>
+      <li>IRC: seirl @ irc.freeenode.net</li>
+      <li>email: <a href="mailto:antoine.pietri1@gmail.com">
+          antoine.pietri1@gmail.com</a></li>
+      <li>twitter: <a href="https://twitter.com/seirl_">@seirl_</a></li>
+      <li>linkedin: <a href="https://www.linkedin.com/in/antoine-pietri-37895557/">antoine-pietri</a></li>
+      <li>PGP: 🔑
+        <a href="https://sks-keyservers.net/pks/lookup?op=get&search=0x2F8984858B1A9945">
+          2F89 8485 8B1A 9945</a> (<a
+          href="https://sks-keyservers.net/pks/lookup?op=vindex&search=0x2F8984858B1A9945">trust chain</a>)</li>
+    </ul>
+  </body>
+</html>
