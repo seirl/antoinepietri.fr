@@ -211,6 +211,8 @@ Some school projects were interesting enough to be worth mentioning here:
 -   Matrix: @seirl:matrix.org
 -   email: antoine.pietri1@gmail.com
 -   GitHub: [seirl](https://github.com/seirl)
+-   Google Scholar: [Antoine
+    Pietri](https://scholar.google.com/citations?user=m_bmmbsAAAAJ)
 -   Twitter: [\@seirl\_](https://twitter.com/seirl_)
 -   Linkedin:
     [antoine-pietri](https://www.linkedin.com/in/antoine-pietri-37895557/)
