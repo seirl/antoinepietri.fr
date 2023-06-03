@@ -1,0 +1,24 @@
+body {
+    font-family: monospace;
+    margin: auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+h2:before {
+  content: "> ";
+}
+
+details {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+.figure-small {
+    float: right;
+}
+
+.figure-big {
+    margin: auto;
+    text-align: center;
+}
