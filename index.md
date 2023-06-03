@@ -1,116 +1,53 @@
 % Antoine Pietri
 
-# seirl\'s webzone   \\\_o\< \~ ♫♩
+# Dr. Antoine Pietri
 
-## whoami
+## About me
 
-I\'m **Antoine Pietri**, a Ph.D student working in Paris. I have a
-software engineering degree from the computer science school
-[EPITA](http://epita.fr/). I have various interests like programming,
-algorithms, languages and language theory, networks, tooling, and good
-abstractions.
+I am a Backend Software Engineer living in Zürich, Switzerland. I work at
+Google's Zürich office, where my focus is on building large graph databases
+applied to privacy systems. In 2021, I completed my Ph.D. in Paris, France,
+where I conducted research on large-scale analysis of the graph of public
+software development. In 2016, I obtained a MSc in theoretical computer
+science, majoring in machine learning.
 
-You can find my **[resume here](http://koin.fr/upload/cv.pdf)** .
+I am also passionate about economics, particularly environmental economics and
+climate change research.
 
-## research
+You can find my **[resume here](cv/cv.pdf)**.
+
+## Research
 
 ### Software Heritage
 
-I\'m a Ph.D student working on the [Software
+My PhD was conducted as part of the [Software
 Heritage](https://www.softwareheritage.org/) project at
-[Inria](https://www.inria.fr/) on large-scale analysis of the source
-code available in the Software heritage archive, under the supervision
-of [Roberto di Cosmo](https://en.wikipedia.org/wiki/Roberto_Di_Cosmo)
-and [Stefano
-Zacchiroli](https://en.wikipedia.org/wiki/Stefano_Zacchiroli).
+[Inria](https://www.inria.fr/) under the supervision of my PhD advisor,
+[Stefano Zacchiroli](https://en.wikipedia.org/wiki/Stefano_Zacchiroli).
+My research was focused on making accessible for research the *graph of public
+software development*, an immense interconnected graph of more than 25 billion
+software artifacts, linked together by more than 450 billion edges.
 
-<details>
-<summary>Click here to see the full subject of my thesis.</summary>
+You can find the thesis here:
 
-### Enabling Big Code analysis on a very large source code corpus
+-   Antoine Pietri. **Organizing the Graph of Public Software Development for
+    Large-Scale Mining**, *PhD thesis. 2021.*
 
-#### Context
-
-Software Heritage is an ambitious digital preservation initiative that
-is amassing unprecedented amounts of software source code from a variety
-of origins, and keeps track of all their evolution history, as captured
-by version control systems. This is leading to the creation of one of
-the largest source code corpus and is building the corresponding
-development graph where the nodes are the contents of the source files,
-directories and commit points, and the edges carry the name of the
-files, and the links between commits and directories.
-
-The availability of this universal software source code knowledge base
-provides unique opportunities for what is now known as "Big Code"
-research: querying, analysing and extracting knowledge both from the
-contents of the data and from the structure of the commit graph. We
-expect that having a way to leverage the data contained in very large
-source code archives that include development history, like the Software
-Heritage archive, will pave the way to learn more about the evolution of
-software at a very large scale than it has ever been possible before.
-
-The exploitation of such an unprecedented very large source code
-collection poses significant challenges in terms of data representation,
-query languages, system architecture and specialised algorithms.
-
-[](merkle.svg)
-
-![The Software Heritage Merkle Directed Acyclic
-Graph](merkle.svg){width="400"}
-
-#### Objectives of the thesis
-
-The main focus of the thesis will be to find efficient ways to perform
-large scale computations not only on the content of the archive, but
-also on useful data that could be derived from it, like code diffs,
-releases, branch/merge history, and reuse patterns.
-
-The current data representation structure of Software Heritage is a
-Merkle DAG, which allows efficient deduplication, verification, and
-indexing of the content of the archive. While this format is
-cost-efficient for preservation purposes, it has not been designed with
-large scale analysis in mind. The current design uses data indirections
-extensively, which adds considerable latency to read-intensive
-operations. An important part of our goal will be to explore more
-efficient ways of storing and indexing all the software artifacts
-currently contained in the DAG, to allow for intensive computations to
-take place on the archive.
-
-As part of this quest for the most efficient data representation for
-such an archive, we will look for heuristics to find and isolate
-repetitive code snippets, as it would not only allow to deduplicate and
-analyze the content at a more fine-grained level, but also give valuable
-insights to implement efficient storage, retrieval, and analysis of
-those snippets.
-
-Another important aspect that will be looked into is the interface for
-performing computations on the archive. As the Merkle DAG structure is
-pretty unique, we will investigate ways of performing efficient and
-expressive queries by working on a query language that operates on this
-structure. This language could either be an adaptation or an extension
-of relational algebra implementations like SQL, or a completely new
-domain-specific language.
-
-As we expect this project to become an important gateway for scientists
-working on Big Code analysis, the thesis will have to work with
-efficient distributed architectures as an integral part of the project's
-design. For instance, it should be easy and cost-efficient to make the
-analysis infrastructure scale-out to accommodate for load increases. At
-the same time, the deployment should be easy, for example allowing
-instantiation on state-of-the-art public cloud offering.
-
-Finally, the thesis will necessarily include practical applications and
-experimental validation of the analysis approach, in order to show
-meaningful results and usage examples, and as a way to test the general
-usability of the system.
-
-</details>
+    - [preprint](https://github.com/seirl/thesis/releases/download/final/slides.pdf)
+    - [defense slides](https://github.com/seirl/thesis/releases/download/final/thesis.pdf)
+    - [abstract (theses.fr)](https://www.theses.fr/2021UNIP7183)
+    - [archived (hal.science TEL)](https://hal.science/tel-03515795/)
+    - [repo](https://github.com/seirl/thesis)
 
 #### Community
 
--   **OSS 2021:** PC member
--   **MSR 2021:** PC member of the technical track
--   **MSR 2020:** PC chair of the mining challenge track
+I was a member of the following research program committees:
+
+-   **[OSS 2021](https://conf.researchr.org/home/oss-2021):** PC member.
+-   **[MSR 2021](https://conf.researchr.org/home/msr-2021):** PC member of the
+    technical track.
+-   **[MSR 2020](https://conf.researchr.org/home/msr-2020):** PC chair of the
+    mining challenge track.
 
 #### Publications
 
@@ -161,12 +98,36 @@ where I worked on:
     automata
 -   2016: random generation of automata
 
-## prologin
+## Volunteering
+
+### Citizen's Climate Lobby
+
+I'm a strong advocate for evidence-based policies for climate change
+mitigation. There is an overwhelming amount of scientific evidence that *carbon
+pricing* is an efficient and fair solution to abate greenhouse gas emissions,
+and that adverse effects on low-income households can be considerably reduced
+or eliminated through a *carbon dividend redistribution scheme*.
+
+I volunteer with [Citizen's Climate Lobby
+Europe](https://citizensclimateeurope.org/) to advocate for this solution. I
+went several times to the European Parliament where I met with MEPs to explain
+this scheme, which eventually ended up being integrated to the EU ETS2 policy
+(Social Climate Fund).
+
+### Girls Can Code
+
+In 2014, I co-founded [Girls Can Code!](https://girlscancode.fr/) with
+Jill-Jênn Vie and Marin Hannache, a summer camp for high-school girls, with the
+goal to promote gender diversity in computer science. We were granted the
+Google RISE award ($20000) as a way to kickstart the initiative, which is still
+running today.
+
+### Prologin
 
 I have been an organizer of the French national programming contest
-**[Prologin](https://prologin.org)** since 2011. I was the president of
-the organization in 2014, and I now mostly work on the technical aspects
-of the contest.
+**[Prologin](https://prologin.org)** from 2011 to 2021. I was the president of
+the organization in 2014, and after that mostly focused on the technical
+aspects of the contest.
 
 I worked on a lot of very interesting projects there, among which:
 
@@ -174,13 +135,14 @@ I worked on a lot of very interesting projects there, among which:
     in Python that uses kernel namespacing and cgroups
 -   [stechec2](https://github.com/prologin/stechec2): a client-server
     match-maker and networking framework in C++
--   [sadm](https://github.com/prologin/sadm): the infrastructure of the
+-   [sadm](https://github.com/prologin/sadm): the full infrastructure of the
     finals, where I wrote a [custom task
     queue](https://github.com/prologin/sadm/tree/master/python-lib/prologin/masternode)
     with Python and asyncio, an
     [RPC](https://github.com/prologin/sadm/tree/master/python-lib/prologin/rpc),
-    and other stuff
--   [prologin.org](https://prologin.org): the website in Django.
+    and many other backend/infrastructure tools and services.
+-   [prologin.org](https://github.com/prologin/prologin-site): the website in
+    Django.
 
 I wrote algorithmic exercises and written subjects for the contest. You
 can find the most interesting ones here (in French):
@@ -212,36 +174,27 @@ I also created the tournament games of the finals in
 and
 [2016](https://prologin.org/static/archives/2016/finale/sujet/provogon.pdf).
 
-## tech skillz
+## Projects
 
-This is a non-exhaustive list of technologies and stuff I like to use.
+I have many contributions in various open source projects, most of which can be
+found on my [GitHub](https://github.com/seirl).
 
--   **languages**: Python, C++, C, OCaml, C#, SQL, bash, Java,
-    PHP/Hack^(please\ no)^
--   **data**: ElasticSearch, PostgreSQL
--   **libs**: asyncio, tornado, aiohttp, Qt, ZeroMQ, boost, gtest,
-    celery
--   **web**: nginx, Apache, django, Flask, requests, Let\'s Encrypt
--   **tools**: git, vim, cmake, i3, tmux
--   **network**: iptables, netfilter, iproute2, tcpdump
--   **protocols**: HTTP, TLS, DNS, IRC, XMPP
--   **storage**: NFS, NBD, ext4, btrfs, bcache, overlay, RAID, LVM
--   **os**: Linux (Archlinux, Debian, Ubuntu), FreeBSD, Windows
--   **virtualization**: VirtualBox, libvirt, Xen, QEMU, vagrant, packer
--   **containers**: Docker, OpenVZ, LXC, systemd-nspawn
--   **other**: iPXE, systemd
+### Personal projects
 
-## random projects
+-   [SimpleArmory](https://github.com/kevinclement/SimpleArmory): a website to
+    track collections in World of Warcraft, with data-mining of the game
+    files to generate the collections. Tens of thousands of daily active users.
+-   [epiquote](https://github.com/seirl/epiquote): a bash.org-like
+    website in django
 
-Here are some of the ones worth mentioning (some of them are school
-projects that grew out of hand):
+### School projects
+
+Some school projects were interesting enough to be worth mentioning here:
 
 -   42sh: a functional posix compliant shell made with Rémi Audebert,
     Paul Hervot and Adrien Schildknecht
 -   [ouiche](https://github.com/seirl/ouiche): a fast spell checker in
     C++ with a Radix Tree and a dynamic Damerau-Levenshtein table
--   [epiquote](https://github.com/seirl/epiquote): a bash.org-like
-    website in django
 -   [m68hc11](https://github.com/seirl/m68hc11): a m68hc11 assembler in
     C
 -   [hopf-is-alie](https://bitbucket.org/Zeletochoy/hopf-is-alie): a
@@ -252,12 +205,14 @@ projects that grew out of hand):
 -   [zerauth](https://github.com/seirl/zerauth): a reverse engineered
     implementation of the zeroshell auth protocol
 
-## contact & links
+## Contact & Links
 
--   IRC: seirl @ irc.freeenode.net
--   email: <antoine.pietri1@gmail.com>
--   twitter: [\@seirl\_](https://twitter.com/seirl_)
--   linkedin:
+-   IRC: seirl @ irc.libera.chat
+-   Matrix: @seirl:matrix.org
+-   email: antoine.pietri1@gmail.com
+-   GitHub: [seirl](https://github.com/seirl)
+-   Twitter: [\@seirl\_](https://twitter.com/seirl_)
+-   Linkedin:
     [antoine-pietri](https://www.linkedin.com/in/antoine-pietri-37895557/)
 -   PGP: 🔑 [2F89 8485 8B1A
     9945](https://sks-keyservers.net/pks/lookup?op=get&search=0x2F8984858B1A9945)
