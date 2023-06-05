@@ -1,7 +1,5 @@
 % Antoine Pietri
 
-# Dr. Antoine Pietri
-
 ## About me
 
 I am a Backend Software Engineer living in Zürich, Switzerland. I work at
